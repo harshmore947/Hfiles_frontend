@@ -32,27 +32,32 @@ A Next.js frontend application for medical file management with user authenticat
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/harshmore947/Hfiles_frontend.git
    cd Hfiles_frontend
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Set up environment variables:
+
    ```bash
    cp .env.example .env.local
    ```
-   
+
    Update `.env.local` with your backend URL:
+
    ```env
    NEXT_PUBLIC_API_URL=https://your-backend-url.azurewebsites.net
    ```
 
 4. Run the development server:
+
    ```bash
    npm run dev
    ```
@@ -83,17 +88,20 @@ A Next.js frontend application for medical file management with user authenticat
 ## Key Components
 
 ### Authentication Store (`lib/stores/authStore.ts`)
+
 - Manages user authentication state
 - Handles login, logout, profile updates
 - Medical file CRUD operations
 - Session management with backend cookies
 
 ### Dashboard Components
+
 - **ProfileCard**: User profile display and editing
 - **AddRecords**: Medical file upload interface
 - **ViewRecord**: Medical files table with delete functionality
 
 ### Middleware (`middleware.ts`)
+
 - Client-side authentication checking
 - Protected route handling
 
@@ -102,7 +110,7 @@ A Next.js frontend application for medical file management with user authenticat
 The frontend integrates with an ASP.NET backend that provides:
 
 - `/api/auth/login` - User login
-- `/api/auth/register` - User registration  
+- `/api/auth/register` - User registration
 - `/api/auth/logout` - User logout
 - `/api/profile` - Profile management
 - `/api/profile/upload-profile-image` - Profile image upload

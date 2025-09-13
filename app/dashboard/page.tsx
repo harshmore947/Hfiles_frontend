@@ -14,6 +14,11 @@ export default function Page() {
   const router = useRouter();
 
   useEffect(() => {
+    // Update page title
+    document.title = "Dashboard - HFiles";
+  }, []);
+
+  useEffect(() => {
     const checkAuth = async () => {
       try {
         await fetchProfile();

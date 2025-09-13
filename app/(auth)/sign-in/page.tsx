@@ -11,6 +11,11 @@ function SignInPage() {
   const { isLoading, setLoading, clearError } = useAuthStore();
   const router = useRouter();
 
+  React.useEffect(() => {
+    // Update page title
+    document.title = "Sign Up - HFiles";
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
