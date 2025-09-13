@@ -15,12 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "HFiles - Medical File Management",
-  description: "Secure medical file management system for healthcare professionals and patients",
+  description:
+    "Secure medical file management system for healthcare professionals and patients",
   icons: {
-    icon: [
-      { url: "/icon.png" },
-      { url: "/Hfiles_logo.png" },
-    ],
+    icon: [{ url: "/icon.png" }, { url: "/Hfiles_logo.png" }],
     apple: "/Hfiles_logo.png",
   },
 };

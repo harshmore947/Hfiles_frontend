@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useAuthStore } from "../../lib/stores/authStore";
+import { generateAvatarUrl } from "../../lib/utils";
 import toast from "react-hot-toast";
 
 export default function ProfileCard() {
@@ -93,7 +94,7 @@ export default function ProfileCard() {
         <div className="relative">
           <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-300">
             <Image
-              src={user?.profileImageUrl || "/api/placeholder/80/80"}
+              src={user?.profileImageUrl || generateAvatarUrl(user?.fullName || "User", 80)}
               alt="Profile"
               width={80}
               height={80}
